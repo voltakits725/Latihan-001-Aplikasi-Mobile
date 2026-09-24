@@ -1,3 +1,4 @@
+```dart
 void main() {
     
     String NIM = '1124160165';
@@ -6,10 +7,7 @@ void main() {
     String Konsentrasi = 'Software Engineering';
     String Angkatan = "2024";
     int umur = 20;
-
-
     bool sudahLulus = false;
-
     print('''
 NIM = $NIM
 Nama = $Nama
@@ -112,3 +110,4 @@ Umur = $umur
     });
 
 }
+```
