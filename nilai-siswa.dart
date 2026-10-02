@@ -41,16 +41,19 @@ String tentukanGrade(double nilaiAkhir){
 }
 
 String tentukanStatus(String grade){
-  if(grade == "A" ){
-    return "LULUS";
-  }else if(grade == "B"){
-    return "LULUS";
-  }else if(grade == "C"){
-    return "LULUS";
-  }else if(grade == "D"){
-    return "REMEDIAL";
-  }else{
-    return "TIDAK LULUS(bodoh)";
+  switch(grade){
+    case "A":
+    case "B":
+    case "C":
+      return "LULUS";
+
+    case "D":
+    case "E":
+      return "TIDAK LULUS";
+
+    default:
+      return "ga adajxnsn";
+
   }
   
 }
