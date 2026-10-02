@@ -1,0 +1,56 @@
+void main(){
+  const NAMA = "Rafly";
+  const double nilaiUas = 85;
+  const double nilaiUts = 70;
+  const double nilaiTugas = 75;
+
+  double nilaiAkhir = hitungNilaiAkhir(nilaiUts, nilaiUas, nilaiTugas);
+
+  String grade = tentukanGrade(nilaiAkhir);
+
+  String status = tentukanStatus(grade);
+  
+
+  print("Nama        : $NAMA");
+  print("Nilai UAS    : $nilaiUas");
+  print("Nilai UTS    : $nilaiUts");
+  print("Nilai Tugas  : $nilaiTugas");
+  print("Nilai Akhir  : $nilaiAkhir");
+  print("Grade        : $grade");
+  print("Status       : $status");
+}
+
+double hitungNilaiAkhir(double uts, double uas, double nilaiTugas){
+  double nilaiAkhir = (nilaiTugas * 0.3) + (uts * 0.3) + (uas * 40);
+  return nilaiAkhir;
+}
+
+String tentukanGrade(double nilaiAkhir){
+  if(nilaiAkhir >= 85){
+    return "A";
+  }else if(nilaiAkhir >= 75){
+    return "B";
+  }else if(nilaiAkhir >= 65){
+    return "C";
+  }else if(nilaiAkhir >= 50){
+    return "D";
+  }
+  else{
+    return "E";
+  }
+}
+
+String tentukanStatus(String grade){
+  if(grade == "A" ){
+    return "LULUS";
+  }else if(grade == "B"){
+    return "LULUS";
+  }else if(grade == "C"){
+    return "LULUS";
+  }else if(grade == "D"){
+    return "REMEDIAL";
+  }else{
+    return "TIDAK LULUS(bodoh)";
+  }
+  
+}
